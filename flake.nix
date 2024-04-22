@@ -1,5 +1,5 @@
 {
-    description = "TEMPLATE";
+    description = "Bomberman";
 
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
@@ -26,9 +26,12 @@
                 pkg-config
                 alsa-lib
                 libudev-zero
-
+                libxkbcommon
+                wayland
+                vulkan-loader
+                libGL
             ];
-
+            LD_LIBRARY_PATH = "${pkgs.libxkbcommon}/lib:${pkgs.libGL}/lib";
         };
     };
 }
