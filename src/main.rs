@@ -1,6 +1,7 @@
 use bevy::prelude::*;
 
 mod player;
+mod bomb;
 mod obstacle;
 
 use player::PlayerPlugin;
