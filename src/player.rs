@@ -2,7 +2,7 @@ use bevy::{prelude::*, sprite::MaterialMesh2dBundle};
 
 const PLAYER_SPEED: f32 = 500.0;
 
-const PLAYER_COLOR: Color = Color::rgb(255.0, 255.0, 255.0);
+const PLAYER_COLOR: Color = Color::rgb(1.0, 1.0, 1.0);
 const PLAYER_START: Vec3 = Vec3::new(0.0, -50.0, 1.0);
 const PLAYER_SIZE: f32 = 30.0;
 
