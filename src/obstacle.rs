@@ -1,4 +1,5 @@
 use bevy::{prelude::*, sprite::MaterialMesh2dBundle};
+use crate::player::Player;
 
 const COLOR: Color = Color::rgb(0.5, 0.5, 0.5);
 const Z_INDEX: f32 = 2.0;
@@ -8,7 +9,9 @@ pub struct ObstaclePlugin;
 impl Plugin for ObstaclePlugin {
     fn build(&self, app: &mut App) {
         app
-            .add_systems(Startup, setup);
+            .add_systems(Startup, setup)
+            .add_systems(FixedUpdate, collide)
+        ;
     }
 }
 
@@ -29,5 +32,11 @@ fn setup(
             ..default()
         },
     ));
+}
+
+fn collide(
+    mut query: Query<&mut Transform, With<Player>>,
+) {
+     
 }
 

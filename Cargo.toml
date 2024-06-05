@@ -13,4 +13,6 @@ opt-level = 3
 
 [dependencies]
 bevy = { version = "0.13.2", features = ["wayland"] }
+bevy_ui = "0.13.2"
+parry2d = "0.15.0"
 

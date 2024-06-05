@@ -21,12 +21,13 @@ impl Plugin for PlayerPlugin {
         app
             .insert_resource(BombCooldownTimer(timer))
             .add_systems(Startup, init_player)
-            .add_systems(FixedUpdate, (player_controls, explode).chain());
+            .add_systems(FixedUpdate, (player_controls, explode).chain())
+        ;
     }
 }
 
 #[derive(Component)]
-struct Player {
+pub struct Player {
     health: u8,
 }
 
